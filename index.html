@@ -1,211 +1,390 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>roket913 カービィディスカバリー　説明</title>
-  <!-- css/style.css を読み込む -->
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <div class="wrapper">
-    <header class="site-header">
-      <h1>こんにちは</h1>
-      <p class="subtitle">シンプルなマイページへようこそ</p>
-    </header>
+:root {
+  --bg: #050816;
+  --bg-alt: #0b1020;
+  --accent: #6366f1;
+  --accent-soft: rgba(99, 102, 241, 0.15);
+  --accent-strong: #a855f7;
+  --text-main: #f9fafb;
+  --text-muted: #9ca3af;
+  --border-subtle: rgba(148, 163, 184, 0.3);
+  --radius-lg: 18px;
+  --shadow-soft: 0 24px 60px rgba(15, 23, 42, 0.7);
+}
 
-    <main class="content">
-      <p>
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
- 　こんにちは！！ roket913です!!<br>
-  皆さんカービィディスカバリーを知っていますか。<br>
-  今回はそれを説明します.<br>
-　星のカービィディスカバリー攻略<br>
-星のカービィディスカバリー攻略班<br>
-最終更新日：2025.11.20 22:43<br>
-星のカービィディスカバリーの攻略サイトです。ステージ攻略やボス攻略、コピー能力などカービィディスカバリーに関する全ての情報を取り扱っています。<br>
+html, body {
+  margin: 0;
+  padding: 0;
+}
 
-目次<br>
-スターリーワールド	人気記事	ステージ攻略
-コピー能力	ほおばりヘンケイ	コロシアム
-ワドルディの町	ミニゲーム	お役立ち記事
-ガチャルポン	掲示板	ゲーム紹介
-スターリーワールド関連
-スターリーワールド
+body {
+  font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: radial-gradient(circle at top, #1f2937 0, #020617 55%, #000 100%);
+  color: var(--text-main);
+  line-height: 1.6;
+}
 
-▶︎スターリーワールド攻略まとめ
+/* Layout utilities */
 
-スターリーステージ攻略
-はじまりの流星群はじまりの流星群	迷子のアライブルモール迷子のアライブルモール
-ひらけ！星降りビーチひらけ！星降りビーチ	ブロックヒルズに流されてブロックヒルズに流されて
-ワンダリアロードをかけてワンダリアロードをかけて	転回のスカイパレード転回のスカイパレード
-きらめきのホワイトリンクきらめきのホワイトリンク	いてつく風とスノーマンいてつく風とスノーマン
-時を数える大荒野時を数える大荒野	ムーンナイトラビリンスムーンナイトラビリンス
-崩れゆく禁足地へ崩れゆく禁足地へ	結晶！ビースト軍団頂上戦結晶！ビースト軍団頂上戦
-星降りの火山島星降りの火山島	
+.container {
+  width: min(1100px, 100% - 32px);
+  margin: 0 auto;
+}
 
-TRUVID 魅力的な京都――時を超える静寂と伝統美
-スターリーワールド関連記事
-新要素新要素	発売日発売日はいつ？
-ガチャルポンEXガチャルポンEX	アップグレードパスアップグレードパス
-解放条件スターリーステージ解放条件	HALの部屋HALの部屋
-スターリーコインの効率のいい稼ぎ方スターリーコインの稼ぎ方	スターリーを助ける方法スターリーを助ける方法
-バネバネほおばり	はぐるまはぐるまほおばり	看板かんばんほおばり
-コロシアム
-コロシアムコロシアムの解放条件	アルティメットZEXTheアルティメットカップZ EX
-星のカービィディスカバリーのおすすめ人気記事
-人気記事フロント画像
+/* Header */
 
-人気記事一覧
-キーワード一覧プレゼントキーワード一覧	設計図の入手場所一覧.png設計図の入手場所一覧
-評価・レビュー最新評価レビュー！	ステージ攻略ステージ攻略
-ボス攻略ボス攻略	トレジャーロード攻略トレジャーロード攻略
-コピー能力コピー能力一覧	最強能力ランキングパーシャル.png最強コピー能力ランキング
-エフィリンの裏切りはある？エフィリンの裏切りはある？	-
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(16px);
+  background: linear-gradient(to bottom, rgba(15, 23, 42, 0.9), transparent);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+}
 
-収集・やり込み系
-クリア後のやりこみ要素まとめクリア後のやりこみ要素まとめ	達成率100％の条件達成率100％の条件
-ワドルディの場所まとめ一覧ワドルディの場所	レオンのソウルレオンのソウル
-HAL部屋HAL部屋	コピー能力強化の優先度とやり方能力強化の優先度とやり方
-星のカービィディスカバリーのステージ攻略
-ステージ
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+}
 
-▶︎ステージ攻略記事一覧
+.logo {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
 
-ネイチェル草原ネイチェル草原	エバーブルグ海岸エバーブルグ海岸
-ワンダリア跡地ワンダリア跡地	ホワイティホルンズホワイティホルンズ
-オリジネシア荒野大地オリジネシア荒野大地	レッドガル禁足地レッドガル禁足地
-ラボ・ディスカバールラボ・ディスカバール	絶島ドリーミーフォルガ絶島ドリーミーフォルガ
+.nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-left: 18px;
+  font-size: 0.9rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
 
-星のカービィディスカバリーのコピー能力
-コピー能力フロント画像
+.nav a:hover {
+  color: var(--text-main);
+  transform: translateY(-1px);
+}
 
-▶コピー能力一覧を見る
+.nav-cta {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+}
 
+/* Hero */
 
-コピー能力一覧
-アイス画像アイス	カッター画像カッター	クラッシュ画像クラッシュ
-スリープ画像スリープ	ソード画像ソード	ドリル画像ドリル
-トルネイド画像トルネイド	ニードル画像ニードル	ハンマー画像ハンマー
-ファイア画像ファイア	ボム画像ボム	レンジャー画像レンジャー
+.hero {
+  position: relative;
+  padding: 80px 0 72px;
+  overflow: hidden;
+}
 
-進化能力(2段階目)
-ギガントソード画像ギガントソード	ジャンクニードル画像ジャンクニードル	スワロトルネイド画像スワロトルネイド
-タイムクラッシュ画像タイムクラッシュ	チェインボム画像チェインボム	チャクラムカッター画像チャクラムカッター
-ディープスリープ画像ディープスリープ	ノーブルレンジャー画像ノーブルレンジャー	ピコピコハンマー画像ピコピコハンマー
-フロストアイス画像フロストアイス	ペンシルドリル画像ペンシルドリル	ボルケーノファイア画像ボルケーノファイア
+.hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 3.5fr) minmax(0, 2.5fr);
+  gap: 40px;
+  align-items: center;
+}
 
-進化能力(3段階目)
-オートサーチボム画像オートサーチボム	クリスタルニードル画像クリスタルニードル	ストームトルネイド画像ストームトルネイド
-スペースレンジャー画像スペースレンジャー	ツインズドリル画像ツインズドリル	ドラゴニックファイア画像ドラゴニックファイア
-ブリザードアイス画像ブリザードアイス	フルメタルカッター画像フルメタルカッター	メタナイトソード画像メタナイトソード
-ワイルドハンマー画像ワイルドハンマー
+.hero-text h1 {
+  font-size: clamp(2.2rem, 3.2vw, 3rem);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
 
-進化能力(4段階目)
-バルフレイソード画像バルフレイソード	マスクドハンマー画像マスクドハンマー
-星のカービィディスカバリーのほおばりヘンケイ
-ほおばりヘンケイフロント画像
+.hero-text p {
+  color: var(--text-muted);
+  max-width: 520px;
+}
 
-▶︎頬張り変形一覧を見る
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0 10px;
+}
 
+.hero-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
 
-ほおばりヘンケイ一覧
-くるまほおばり画像くるまほおばり	さんかくほおばり画像さんかくほおばり
-わっかほおばり画像わっかほおばり	じはんきほおばり画像じはんきほおばり
-でんきゅうほおばり画像でんきゅうほおばり	アーチほおばり画像アーチほおばり
-みずふうせんほおばり画像みずふうせんほおばり	かいだんほおばり画像かいだんほおばり
-ロッカーほおぼり画像ロッカーほおぼり	どかんほおばり画像どかんほおばり
-さぎょうしゃほおばり画像さぎょうしゃほおばり	ジェットコースターほおばり画像ジェットコースターほおばり
-ドームほおばり画像ドームほおばり	-
+/* Buttons */
 
-星のカービィディスカバリーのコロシアム
-コロシアム
-▶︎コロシアムの解放条件とおすすめ能力を見る
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 0.94rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+}
 
-メタナイトカップメタナイトカップ	Theアルティメットカップ攻略アルティメット	TheアルティメットカップZアルティメットZ
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  color: #f9fafb;
+  box-shadow: 0 14px 35px rgba(79, 70, 229, 0.6);
+}
 
-星のカービィディスカバリーのワドルディの町
-ワドルディの町フロント画像
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 45px rgba(79, 70, 229, 0.8);
+}
 
-▶︎ワドルディの町の施設一覧を見る
+.btn-outline {
+  background: transparent;
+  color: var(--text-main);
+  border-color: rgba(148, 163, 184, 0.7);
+}
 
-ワドルディの町の施設一覧
-ワドルディの武器屋パーシャルワドルディのぶき屋	ワドルディの道具屋フロントワドルディのどうぐ屋
-ワドルディカフェパーシャルワドルディカフェ	コロシアムパーシャルコロシアム
-ワドルディシアターパーシャルワドルディシアター	カービィハウスパーシャルカービィハウス
-ガチャルポンパーシャルガチャルポン	おとどけワドル便おとどけワドル便
-ものしりワドルディものしりワドルディ	サブゲームパーシャルサブゲーム
-交換ワドルディ交換ワドルディ	町かどワドライブ町かどワドライブ
+.btn-outline:hover {
+  background: rgba(15, 23, 42, 0.85);
+}
 
-星のカービィディスカバリーのミニゲーム
-ミニゲームフロント画像
+/* Hero right panel */
 
-はたらく！ワドルディカフェはたらく！ワドルディカフェ	ドキドキ！せつなのつりぼりドキドキ！せつなのつりぼり
-コロコロ！タマコロカービィコロコロ！タマコロカービィ	-
+.hero-panel {
+  position: relative;
+}
 
-星のカービィディスカバリーの攻略お役立ち記事
-お役立ちフロント画像
+.glass-card {
+  position: relative;
+  padding: 24px 22px 20px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.4));
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  backdrop-filter: blur(22px);
+  box-shadow: var(--shadow-soft);
+}
 
-コインの稼ぎ方コインの稼ぎ方	レアストーンの入手方法レアストーンの入手方法
-ネット接続できることネット接続でできること	2人プレイ2人プレイ
-セーブ記事パーシャルセーブのやり方	操作方法まとめ操作方法まとめ
-ミッションとはミッションとは	キャラクター画像.png登場キャラクター
-難易度(モード)の種類と違い難易度(モード)の種類と違い	amiiboでできることamiiboでできることと使い方
-回避のやり方とコツ回避のやり方とコツ	隠し要素・小ネタまとめ隠し要素・小ネタまとめ
+.glass-card h2 {
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
 
-星のカービィディスカバリーのガチャルポン
-ガチャルポンフロント画像
+.glass-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
 
-▶︎ガチャルポンのフィギュア一覧と入手方法を見る
+.glass-card li {
+  padding-left: 16px;
+  position: relative;
+  margin-bottom: 6px;
+}
 
-カービィ画像カービィ	エフィリン画像エフィリン	とらわれたワドルディ画像とらわれたワドルディ	ブロントバード画像ブロントバード
-バウンシー画像バウンシー	バンダナワドルディ画像バンダナワドルディ	シャッツォ画像シャッツォ	ポピーブラザーズJr,画像ポピーブラザーズJr,
-サーキブル画像サーキブル	ワドルディ画像ワドルディ	チリ―画像チリ―	元気ドリンク画像元気ドリンク
-星ブロック画像星ブロック	孤高の戦士メタナイト画像孤高の戦士メタナイト	ワープスター画像ワープスター	宿敵の暴君デデデ大王画像宿敵の暴君デデデ大王
-むてきキャンディー画像むてきキャンディー	マキシムトマト画像マキシムトマト	カフェ店員カービィ画像カフェ店員カービィ	くるまほおばりケーキ画像くるまほおばりケーキ
-つりぼりカービィ画像つりぼりカービィ	カービィバーガー画像カービィバーガー	ワイルドボンカース画像ワイルドボンカース	スワロリーナ画像スワロリーナ
-▲この表では一部のフィギュアのみ紹介しております
+.glass-card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+}
 
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #e5e7eb;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.6);
+}
 
-星のカービィディスカバリーの掲示板
-掲示板フロント画像
+/* Hero background accent */
 
-▶︎掲示板一覧を見る
+.hero-bg-gradient {
+  position: absolute;
+  inset: auto -140px -260px;
+  height: 420px;
+  background:
+    radial-gradient(circle at 10% 0, rgba(236, 72, 153, 0.16), transparent 55%),
+    radial-gradient(circle at 90% 10%, rgba(56, 189, 248, 0.18), transparent 55%);
+  opacity: 0.9;
+  pointer-events: none;
+}
 
+/* Sections */
 
-掲示板一覧
-雑談掲示板雑談掲示板	キーワード共有掲示板キーワード共有掲示板
-星のカービィディスカバリーのゲーム紹介
-製品情報・公式サイト
-エルデンリングパッケージ
-タイトル	星のカービィディスカバリー
-発売日	2022325
-公式	公式サイト（外部サイトを開きます）
-開発元	ハル研究所
-対応機種	Switch
-ジャンル	アクション
-プレイ人数	１〜２人
-CERO	A
+.section {
+  padding: 72px 0;
+}
 
-お馴染みのコピー能力が「進化」でパワーアップ！
-星のカービィディスカバリーの画像星のカービィディスカバリーでは、カービィお馴染みのコピー能力が「進化」します。進化させることでコピー能力がより強力に！更に、新コピー能力として「レンジャー」と「ドリル」が追加されました。
+.section-alt {
+  background: radial-gradient(circle at top, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 1));
+}
 
+.section-title {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
 
-新能力「ほおばりヘンケイ」が今作から追加！
-星のカービィディスカバリーほおばりへんけい
+.section-lead {
+  color: var(--text-muted);
+  margin-bottom: 32px;
+}
 
-未知なる世界に散らばるアイテムをほおばることで、カービィが変形する「ほおばりヘンケイ」が今作から追加。ほおばるものによって様々なアクションが可能に。見た目のインパクトが大きい…！
+/* Features */
 
-以上です。
-質問あったら、教えて下さい
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
 
+.feature-card {
+  padding: 18px 18px 20px;
+  border-radius: var(--radius-lg);
+  background: radial-gradient(circle at top left, rgba(99, 102, 241, 0.15), rgba(15, 23, 42, 0.95));
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.8);
+}
 
-      </p>
-    </main>
+.feature-card h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+}
 
-    <footer class="site-footer">
-      <p>&copy; 2026 Your Name</p>
-    </footer>
-  </div>
-</body>
-</html>
+.feature-card p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* About */
+
+.about-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+  gap: 36px;
+  align-items: center;
+}
+
+.about-panel {
+  display: grid;
+  gap: 14px;
+}
+
+.stat-card {
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.stat-value {
+  font-size: 1rem;
+}
+
+/* Contact */
+
+.contact-box {
+  padding: 24px 20px;
+  border-radius: 20px;
+  border: 1px dashed rgba(148, 163, 184, 0.6);
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.5));
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+}
+
+.contact-box p {
+  margin: 0;
+  color: var(--text-muted);
+  flex: 1 1 220px;
+}
+
+/* Footer */
+
+.site-footer {
+  border-top: 1px solid rgba(148, 163, 184, 0.35);
+  padding: 18px 0 26px;
+  background: rgba(2, 6, 23, 0.96);
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-panel {
+    order: -1;
+  }
+
+  .about-inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .nav-container {
+    padding: 10px 0;
+  }
+
+  .nav {
+    font-size: 0.84rem;
+  }
+
+  .hero {
+    padding-top: 60px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.9rem;
+  }
+
+  .grid-3 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .contact-box {
+    align-items: flex-start;
+  }
+}
